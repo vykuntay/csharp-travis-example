@@ -5,13 +5,4 @@ install:
 script:
 - xbuild ./Fibonacci/Fibonacci.sln
 - mono ./Fibonacci/packages/xunit.runner.console*/tools/xunit.console.exe ./Fibonacci/Fibonacci.Tests/bin/Debug/Fibonacci.Tests.dll
-deploy:
-  provider: codedeploy
-  access_key_id: "AKIAQV76474MKDB4U6LK"
-  secret_access_key: "Qpbaj5+OO4rIz2TOI6jlwqDIpkDYXbjpokjsjv8c"
-  bucket: "csharp-travis-example"
-  key: latest/csharp-travis-example.zip
-  bundle_type: zip
-  application: csharp
-  deployment_group: csharpdeployment
-  region: us-west-1
+
